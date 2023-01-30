@@ -1,13 +1,170 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", cursive;
+  overflow-x: hidden;
+}
+
+.mainContainer {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/necklace-bg.jpg");
+}
+.leftSection {
+  background-color: blueviolet;
+  border-right: 2px solid #fff;
+  width: 25%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: 2.5s ease;
+}
+.rightSection {
+  display: flex;
+  /* position: fixed; */
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(160, 100, 216);
+  width: 75%;
+  height: 100vh;
+  transform: translateX(+100%);
+  transition: 2.5s ease;
+  border-radius: 5px;
+}
+.navbarLeft {
+  background-color: rgb(53, 16, 87);
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #fff;
+}
+.navbarRight {
+  background-color: rgb(53, 16, 87);
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 2px double #fff;
+  align-items: center;
+}
+.icons {
+  background-color: transparent;
+}
+.icons:hover {
+  transition: 0.5s linear;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.moveBtn {
+  font-weight: bolder;
+  height: 5vh;
+  width: 5vh;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  z-index: 1;
+}
+.catalog {
+  margin-top: 4vh;
+  width: 2vw;
+  height: 90%;
+  position: absolute;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.catalogLetter {
+  color: #fff;
+  /* font-family: "Luminari", fantasy; */
+  font-family: "Comic Sans MS", cursive;
+  text-shadow: 3px 3px 5px
+    rgba(38, 57, 77);
+}
+.swiper {
+  cursor: grab;
+  width: 90%;
+  height: 80vh;
+  margin-top: 5vh;
+  border-radius: 50px;
+  border: 4px solid #fff;
+  box-shadow: rgb(38, 57, 77) 0px 20px
+    30px -10px;
+}
+
+.swiperSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoContainer {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 5vh;
+  height: 90vh;
+}
+
+.heroImgCont {
+  background: url("./assets/madre.jpg");
+  border-radius: 20px;
+  height: 400px;
+  width: 400px;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: rgb(253, 249, 249) 0px 5px
+    15px;
+}
+
+.jewerlyItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+  height: 450px;
+  background-color: #fff;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10%;
+  transition: 1s ease;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px
+      10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.itemName {
+  display: none;
+}
+/* .itemPrice {
+   display: none; 
+}  */
+.imgCont {
+  width: 270px;
+  height: 370px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
